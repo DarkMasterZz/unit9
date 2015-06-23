@@ -48,8 +48,6 @@ public class CadenasAlumnoTest {
         boolean expResult = cadena1.equals(cadena2);
         boolean result = CadenasAlumno.sonIguales(cadena1, cadena2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -60,11 +58,9 @@ public class CadenasAlumnoTest {
         System.out.println("esMayor");
         String cadena1 = "mesa";
         String cadena2 = "silla";
-        boolean expResult = cadena1.compareTo(cadena2)>0;
+        boolean expResult = cadena1.compareTo(cadena2)<0;
         boolean result = CadenasAlumno.esMayor(cadena1, cadena2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -78,8 +74,6 @@ public class CadenasAlumnoTest {
         boolean expResult = cadena1.compareTo(cadena2)<0;
         boolean result = CadenasAlumno.esMenor(cadena1, cadena2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -93,8 +87,6 @@ public class CadenasAlumnoTest {
         boolean expResult = cadena1.equalsIgnoreCase(cadena2);
         boolean result = CadenasAlumno.comparaIgnorandoMayusculas(cadena1, cadena2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -109,8 +101,6 @@ public class CadenasAlumnoTest {
         String expResult = cadena.replaceAll(regla, cambio);
         String result = CadenasAlumno.reemplazaTodos(cadena, regla, cambio);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -122,11 +112,9 @@ public class CadenasAlumnoTest {
         String cadena = "rojo verde rojo amarillo verde";
         String regla = "verde";
         String cambio = "azul";
-        String expResult = cadena.replaceAll(regla, cambio);
+        String expResult = cadena.replaceFirst(regla, cambio);
         String result = CadenasAlumno.reemplazaPrimero(cadena, regla, cambio);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -166,8 +154,6 @@ public class CadenasAlumnoTest {
         String expResult = cadena.trim();
         String result = CadenasAlumno.quitaEspacios(cadena);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -180,8 +166,6 @@ public class CadenasAlumnoTest {
         String expResult = cadena.toUpperCase();
         String result = CadenasAlumno.convertirMayusculas(cadena);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -194,8 +178,6 @@ public class CadenasAlumnoTest {
         String expResult = cadena.toLowerCase();
         String result = CadenasAlumno.convertirMinusculas(cadena);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -208,8 +190,6 @@ public class CadenasAlumnoTest {
         long expResult = cadena.length();
         long result = CadenasAlumno.longitudCadena(cadena);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -223,8 +203,6 @@ public class CadenasAlumnoTest {
         boolean expResult = cadena.startsWith(prefijo);
         boolean result = CadenasAlumno.empiezaCon(cadena, prefijo);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -238,8 +216,6 @@ public class CadenasAlumnoTest {
         boolean expResult = cadena.endsWith(sufijo);
         boolean result = CadenasAlumno.acabaEn(cadena, sufijo);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -253,8 +229,6 @@ public class CadenasAlumnoTest {
         long expResult = cadena.indexOf(buscar);
         long result = CadenasAlumno.posicionPrimeraCadena(cadena, buscar);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -283,8 +257,6 @@ public class CadenasAlumnoTest {
         String expResult = cadena.substring(posicionInicio);
         String result = CadenasAlumno.extraerSubstring(cadena, posicionInicio);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -299,8 +271,6 @@ public class CadenasAlumnoTest {
         String expResult = cadena.substring(posicionInicio, posicionFinal);
         String result = CadenasAlumno.extraerSubstring(cadena, posicionInicio, posicionFinal);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -314,8 +284,6 @@ public class CadenasAlumnoTest {
         String expResult = cadena1.concat(cadena2);
         String result = CadenasAlumno.concatenaCadenas(cadena1, cadena2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -358,4 +326,26 @@ public class CadenasAlumnoTest {
         fail("The test case is a prototype.");
     }
     */
+    
+    public static void main(String[] args)
+    {
+        CadenasAlumnoTest pruebas = new CadenasAlumnoTest();
+        
+        pruebas.testSonIguales();
+        pruebas.testEsMayor();
+        pruebas.testEsMenor();
+        pruebas.testComparaIgnorandoMayusculas();
+        pruebas.testReemplazaTodos();
+        pruebas.testReemplazaPrimero();
+        pruebas.testQuitaEspacios();
+        pruebas.testConvertirMayusculas();
+        pruebas.testConvertirMinusculas();
+        pruebas.testLongitudCadena();
+        pruebas.testEmpiezaCon();
+        pruebas.testAcabaEn();
+        pruebas.testPosicionPrimeraCadena();
+        pruebas.testExtraerSubstring_String_int();
+        pruebas.testExtraerSubstring_3args();
+        pruebas.testConcatenaCadenas();
+    }
 }

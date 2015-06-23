@@ -410,7 +410,7 @@ public class CadenasAlumno {
         String subString = "";
         char [] cad = cadena.toCharArray();
         
-        for(int i = posicionInicio; i <= posicionFinal && i < cad.length; i++){
+        for(int i = posicionInicio; i < posicionFinal && i < cad.length; i++){
             subString += cad[i];
         }
         return subString;
