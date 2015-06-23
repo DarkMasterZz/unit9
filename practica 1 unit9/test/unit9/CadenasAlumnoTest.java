@@ -131,13 +131,13 @@ public class CadenasAlumnoTest {
 
     /**
      * Test of muestraSplitLimite method, of class CadenasAlumno.
-     */
+     *
     @Test
     public void testMuestraSplitLimite() {
         System.out.println("muestraSplitLimite");
-        String cadena = "";
-        String regla = "";
-        int limite = 0;
+        String cadena = "perro gato caballo tigre cocodrilo serpiente";
+        String regla = " ";
+        int limite = 3;
         CadenasAlumno.muestraSplitLimite(cadena, regla, limite);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -145,12 +145,12 @@ public class CadenasAlumnoTest {
 
     /**
      * Test of muestraSplit method, of class CadenasAlumno.
-     */
+     *
     @Test
     public void testMuestraSplit() {
         System.out.println("muestraSplit");
-        String cadena = "";
-        String regla = "";
+        String cadena = "perro gato caballo tigre cocodrilo serpiente";
+        String regla = " ";
         CadenasAlumno.muestraSplit(cadena, regla);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -162,8 +162,8 @@ public class CadenasAlumnoTest {
     @Test
     public void testQuitaEspacios() {
         System.out.println("quitaEspacios");
-        String cadena = "";
-        String expResult = "";
+        String cadena = "    juan    ";
+        String expResult = cadena.trim();
         String result = CadenasAlumno.quitaEspacios(cadena);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -176,8 +176,8 @@ public class CadenasAlumnoTest {
     @Test
     public void testConvertirMayusculas() {
         System.out.println("convertirMayusculas");
-        String cadena = "";
-        String expResult = "";
+        String cadena = "juan";
+        String expResult = cadena.toUpperCase();
         String result = CadenasAlumno.convertirMayusculas(cadena);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -190,8 +190,8 @@ public class CadenasAlumnoTest {
     @Test
     public void testConvertirMinusculas() {
         System.out.println("convertirMinusculas");
-        String cadena = "";
-        String expResult = "";
+        String cadena = "JUAN";
+        String expResult = cadena.toLowerCase();
         String result = CadenasAlumno.convertirMinusculas(cadena);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -204,8 +204,8 @@ public class CadenasAlumnoTest {
     @Test
     public void testLongitudCadena() {
         System.out.println("longitudCadena");
-        String cadena = "";
-        long expResult = 0L;
+        String cadena = "juan";
+        long expResult = cadena.length();
         long result = CadenasAlumno.longitudCadena(cadena);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -218,9 +218,9 @@ public class CadenasAlumnoTest {
     @Test
     public void testEmpiezaCon() {
         System.out.println("empiezaCon");
-        String cadena = "";
-        String prefijo = "";
-        boolean expResult = false;
+        String cadena = "tengo un pastor aleman";
+        String prefijo = "tengo";
+        boolean expResult = cadena.startsWith(prefijo);
         boolean result = CadenasAlumno.empiezaCon(cadena, prefijo);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -233,9 +233,9 @@ public class CadenasAlumnoTest {
     @Test
     public void testAcabaEn() {
         System.out.println("acabaEn");
-        String cadena = "";
-        String sufijo = "";
-        boolean expResult = false;
+        String cadena = "tengo un pastor aleman";
+        String sufijo = "aleman";
+        boolean expResult = cadena.endsWith(sufijo);
         boolean result = CadenasAlumno.acabaEn(cadena, sufijo);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -248,9 +248,9 @@ public class CadenasAlumnoTest {
     @Test
     public void testPosicionPrimeraCadena() {
         System.out.println("posicionPrimeraCadena");
-        String cadena = "";
-        String buscar = "";
-        long expResult = 0L;
+        String cadena = "tengo un pastor aleman";
+        String buscar = "pastor";
+        long expResult = cadena.indexOf(buscar);
         long result = CadenasAlumno.posicionPrimeraCadena(cadena, buscar);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -259,7 +259,7 @@ public class CadenasAlumnoTest {
 
     /**
      * Test of apareceEn method, of class CadenasAlumno.
-     */
+     *
     @Test
     public void testApareceEn() {
         System.out.println("apareceEn");
@@ -278,9 +278,9 @@ public class CadenasAlumnoTest {
     @Test
     public void testExtraerSubstring_String_int() {
         System.out.println("extraerSubstring");
-        String cadena = "";
-        int posicionInicio = 0;
-        String expResult = "";
+        String cadena = "tengo un pastor aleman";
+        int posicionInicio = 5;
+        String expResult = cadena.substring(posicionInicio);
         String result = CadenasAlumno.extraerSubstring(cadena, posicionInicio);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -293,10 +293,10 @@ public class CadenasAlumnoTest {
     @Test
     public void testExtraerSubstring_3args() {
         System.out.println("extraerSubstring");
-        String cadena = "";
-        int posicionInicio = 0;
-        int posicionFinal = 0;
-        String expResult = "";
+        String cadena = "tengo un pastor aleman";
+        int posicionInicio = 5;
+        int posicionFinal = 10;
+        String expResult = cadena.substring(posicionInicio, posicionFinal);
         String result = CadenasAlumno.extraerSubstring(cadena, posicionInicio, posicionFinal);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -309,9 +309,9 @@ public class CadenasAlumnoTest {
     @Test
     public void testConcatenaCadenas() {
         System.out.println("concatenaCadenas");
-        String cadena1 = "";
-        String cadena2 = "";
-        String expResult = "";
+        String cadena1 = "rojo";
+        String cadena2 = "verde";
+        String expResult = cadena1.concat(cadena2);
         String result = CadenasAlumno.concatenaCadenas(cadena1, cadena2);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -320,7 +320,7 @@ public class CadenasAlumnoTest {
 
     /**
      * Test of sonLetras method, of class CadenasAlumno.
-     */
+     *
     @Test
     public void testSonLetras() {
         System.out.println("sonLetras");
@@ -334,7 +334,7 @@ public class CadenasAlumnoTest {
 
     /**
      * Test of sonLetras2 method, of class CadenasAlumno.
-     */
+     *
     @Test
     public void testSonLetras2() {
         System.out.println("sonLetras2");
@@ -348,7 +348,7 @@ public class CadenasAlumnoTest {
 
     /**
      * Test of main method, of class CadenasAlumno.
-     */
+     *
     @Test
     public void testMain() {
         System.out.println("main");
@@ -357,5 +357,5 @@ public class CadenasAlumnoTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+    */
 }
