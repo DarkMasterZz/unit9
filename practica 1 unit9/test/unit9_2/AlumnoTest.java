@@ -45,20 +45,23 @@ public class AlumnoTest {
     @Test
     public void testValidaNif() {
         System.out.println("validaNif");
-        String nif = "4ASD28231";
-        String nif2 = "3454234W";
-        String nif3 = "48668338X";
+        
         Alumno instance = new Alumno();
+        
+        String nif = "4ASD28231";
         boolean expResult = false;
-        boolean expResult2 = true;
         boolean result = instance.validaNif(nif);
-        boolean result2 = instance.validaNif(nif2);
-        boolean result3 = instance.validaNif(nif3);
         assertEquals(expResult, result);
+        
+        String nif2 = "3454234W";
+        boolean expResult2 = false;
+        boolean result2 = instance.validaNif(nif2);
         assertEquals(expResult, result2);
+        
+        String nif3 = "48668338X";
+        boolean expResult3 = false;
+        boolean result3 = instance.validaNif(nif3);
         assertEquals(expResult, result3);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
