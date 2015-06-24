@@ -162,7 +162,7 @@ public class CadenasAlumnoTest {
     @Test
     public void testConvertirMayusculas() {
         System.out.println("convertirMayusculas");
-        String cadena = "juan";
+        String cadena = "MonTaña";
         String expResult = cadena.toUpperCase();
         String result = CadenasAlumno.convertirMayusculas(cadena);
         assertEquals(expResult, result);
@@ -174,7 +174,7 @@ public class CadenasAlumnoTest {
     @Test
     public void testConvertirMinusculas() {
         System.out.println("convertirMinusculas");
-        String cadena = "JUAN";
+        String cadena = "MonTaÑa";
         String expResult = cadena.toLowerCase();
         String result = CadenasAlumno.convertirMinusculas(cadena);
         assertEquals(expResult, result);
